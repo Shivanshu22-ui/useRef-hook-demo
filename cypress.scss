@@ -1,0 +1,11 @@
+describe('InputWithFocusButton', () => {
+    it('focuses the input when the button is clicked', () => {
+      cy.visit('http://localhost:3000');
+  
+      cy.focused().should('have.class', 'input');
+  
+      cy.get('button').click();
+  
+      cy.focused().should('have.class', 'input');
+    });
+  });
